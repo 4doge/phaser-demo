@@ -1,9 +1,10 @@
 import 'phaser';
+import { LoadingScene } from './scenes/loading';
 import { MainScene } from './scenes/main';
 
 const config: Phaser.Types.Core.GameConfig = {
-  width: 800,
-  height: 600,
+  width: 320,
+  height: 320,
   type: Phaser.AUTO,
   parent: 'game',
   physics: {
@@ -14,7 +15,10 @@ const config: Phaser.Types.Core.GameConfig = {
       },
     },
   },
-  scene: MainScene,
+  scene: [
+    LoadingScene,
+    MainScene,
+  ],
 };
 
 export class Game extends Phaser.Game {
