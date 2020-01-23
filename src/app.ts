@@ -3,17 +3,17 @@ import { LoadingScene } from './scenes/loading';
 import { MainScene } from './scenes/main';
 
 const config: Phaser.Types.Core.GameConfig = {
-  width: 320,
-  height: 320,
+  width: 800,
+  height: 600,
   type: Phaser.AUTO,
   parent: 'game',
   physics: {
     default: 'arcade',
-    arcade: {
-      gravity: {
-        y: 300,
-      },
-    },
+    // arcade: {
+    //   gravity: {
+    //     y: 300,
+    //   },
+    // },
   },
   scene: [
     LoadingScene,

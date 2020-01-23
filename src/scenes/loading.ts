@@ -7,14 +7,15 @@ export class LoadingScene extends Phaser.Scene {
   }
 
   preload(): void {
-    console.log('LoadingScene preload');
     this.load.image('map', './src/assets/map/tiles.png');
     this.load.tilemapTiledJSON('map', './src/assets/map/map.json');
-    this.load.atlas('player-atlas', './src/assets/player/player-sprite.png', './src/assets/player/player-atlas.json');
+    this.load.spritesheet('player', './src/assets/player/player.png', {
+      frameWidth: 32,
+      frameHeight: 48,
+    });
   }
 
   create(): void {
-    console.log('LoadingScene create');
     this.scene.start('MainScene');
   }
 
