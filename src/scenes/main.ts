@@ -33,4 +33,9 @@ export class MainScene extends Phaser.Scene {
     // this.player.sprite.anims.play('run-bottom');
   }
 
+  update(): void {
+    // super.update();
+    this.player.update();
+  }
+
 }
